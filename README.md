@@ -18,3 +18,29 @@ ${HOME}/.npm-packages/bin/expo init rnapp .
 
 Most of the props are similar to a _web application_.
 Refet to [React Native Website(https://reactnative.dev/docs/image) for more information.
+
+### Flexbox
+
+Flexbox in react-native is almost same to css.
+
+By default, the `flexDirection` is _column_.
+
+`alignItems` aligns all the **each of the item** inside the flexbox container.
+`alignContent` aligns the **all the items as a whole** inside the flexbox container.
+
+### Positioning
+
+Same as css.
+
+By default, all components are _relatively_ positioned.
+
+## Remaining to learn
+
+- Routing between screens
+- Using a UI Library
+
+## Reference
+
+Tutorials :
+
+- _tut1_ https://www.youtube.com/watch?v=0-S5a0eXPoc
