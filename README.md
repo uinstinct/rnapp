@@ -17,7 +17,7 @@ ${HOME}/.npm-packages/bin/expo init rnapp .
 ### Images
 
 Most of the props are similar to a _web application_.
-Refet to [React Native Website(https://reactnative.dev/docs/image) for more information.
+Refet to [React Native Website](https://reactnative.dev/docs/image) for more information.
 
 ### Flexbox
 
