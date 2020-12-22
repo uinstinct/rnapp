@@ -1,4 +1,4 @@
-### Using the `expo-cli`
+## Using the `expo-cli`
 
 - Do not install npm packages globally - https://dev.to/sroehrl/how-to-install-global-npm-packages-without-sudo-on-ubuntu-3hm4
 
@@ -14,10 +14,12 @@ ln -s /${HOME}/.npm-global/bin/nodemon /usr/local/bin
 ${HOME}/.npm-packages/bin/expo init rnapp .
 ```
 
+## Using Components and Styling in React Native
+
 ### Images
 
 Most of the props are similar to a _web application_.
-Refet to [React Native Website](https://reactnative.dev/docs/image) for more information.
+Refer to [React Native Website](https://reactnative.dev/docs/image) for more information.
 
 ### Flexbox
 
@@ -43,4 +45,4 @@ By default, all components are _relatively_ positioned.
 
 Tutorials :
 
-- _tut1_ https://www.youtube.com/watch?v=0-S5a0eXPoc
+- _tut1_ - https://www.youtube.com/watch?v=0-S5a0eXPoc
