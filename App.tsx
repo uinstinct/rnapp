@@ -1,25 +1,42 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { Button, SafeAreaView, StyleSheet, Text, View, Image } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import {
+  Button,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+} from "react-native";
+import CustomButton from "./components/CustomButton";
 
 export default function App() {
+  const handlePress = () => {
+    console.log("mobile is always changing");
+  };
 
-  const handlePress = ()=>{
-    console.log('mobile is always changing');
-  }
+  const imgSrc = "https://picsum.photos/400/400";
 
-  const imgSrc = "https://reactnative.dev/img/tiny_logo.png";
-  const imgSrc2 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==";
-  
+  const CustomTouchFeedback = () => (
+    <View>
+      <Text style={styles.text}>Tap on the image below to see it change</Text>
+      <TouchableOpacity>
+        <Image source={{ uri: imgSrc, height: 400, width: 400 }} />
+      </TouchableOpacity>
+    </View>
+  );
+
   return (
     <View style={styles.container}>
-      <Text 
-        style={styles.text}
-      >
+      <Text style={styles.text}>
         This should be able to start the project on phone
       </Text>
-      <Image source={{uri:imgSrc2}} height={200} width={200}/>
+      {/* add the height and the width to the source objcect and not as props */}
+      <Image source={{ uri: imgSrc, height: 200, width: 200 }} />
       <StatusBar style="auto" />
+      <CustomButton />
+      <CustomTouchFeedback />
     </View>
   );
 }
@@ -27,13 +44,13 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
   text: {
     fontSize: 30,
-    textAlign: 'center',
-    color: 'green'
-  }
+    textAlign: "center",
+    color: "green",
+  },
 });
