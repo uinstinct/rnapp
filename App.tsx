@@ -1,22 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Button, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { Button, SafeAreaView, StyleSheet, Text, View, Image } from 'react-native';
 
 export default function App() {
 
   const handlePress = ()=>{
     console.log('mobile is always changing');
   }
+
+  const imgSrc = "https://reactnative.dev/img/tiny_logo.png";
+  const imgSrc2 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==";
   
   return (
-    <SafeAreaView style={styles.container}>
-      <Text>This should be able to start the project on phone</Text>
-      <Text>Check if refreshing works</Text>
-      <Text numberOfLines={1} onPress={handlePress}>
-        This is a very long text. This will show ellipsis when out of the area because number of lines set is 1
+    <View style={styles.container}>
+      <Text 
+        style={styles.text}
+      >
+        This should be able to start the project on phone
       </Text>
+      <Image source={{uri:imgSrc2}} height={200} width={200}/>
       <StatusBar style="auto" />
-    </SafeAreaView>
+    </View>
   );
 }
 
@@ -27,4 +31,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  text: {
+    fontSize: 30,
+    textAlign: 'center',
+    color: 'green'
+  }
 });
